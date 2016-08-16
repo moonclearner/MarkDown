@@ -96,6 +96,47 @@ git rebase 會基於 master branch 目前最後一次的 commit 內容再往後�
 可以看到我剛剛在 master branch 下了 `git merge cat` 這個指令來告訴 git 要 merge cat 到現在所在的 branch ，因此在圖上就看到了 cat branch 拉一條線回來合併到了 master 這個 branch 了，解釋這張圖的意思就是， cat branch 從 master branch 的 Another spec 這一次的 commit 分支出來後，自己產生了三次的 commit (Add Cat.rb、Add initializer、Rever “Add initializer”) 然後合併到 master。
 
 
+# Confict: 處理 Git 合併時的衝突：
+很常發生的情況是再 merge 或是 rebase 的圖中產生了 convict (衝突)，這時候 Git 會停下來請你去處理，例如我們在 cat 和 master 的 branch 都對 lib/cat.rb 這支檔案做編輯，然後我們將他們 merge：
+
+你會看到 Git 告訴你在你合併的過程中在 lib/cat.rb 這支檔案發生了衝突，Git 不知道該怎麼處理因此要你去處理它，這時候我們打開這支檔案會看到這樣的情況：
+
+<<<<<<<<<< HEAD 到 ========== 的中間區域是目前你所在 branch 的 commit 內容，而從 =========== 到 >>>>>>>>>>> cat 則是你要合併的 cat branch 的內容，你必須做出決定看是要兩個都留下，或是選一個，或是改成你想要的內容，改好後記得要將 Git 自動產生的 <<< 、 =====、 <<< 的內容都刪除，修改完畢後存檔，將剛剛修改過的檔案再使用 git add 加入 stage ，將所有的衝突都修正完畢後就使用 git commit 提交一次 commit，由於這次的 commit 是在處理 merge 時的衝突，因此 Git 很聰明的已經幫我們加上了一些預設的訊息 “Merge branch ‘cat’”， commit 提交後就會看到合併成功的訊息了。
+
+**發生 confict 時的處理步驟**
+
+1. 將發生 confict 的檔案打開，處理內容( 別忘了刪除<<<、===、>>> )。
+2. 使用 git add 將處理好的檔案加入 stage。
+3. 反覆步驟 1~2 直到所有 confict 處理完畢。
+4. git commit 提交合併訊息。
+5. 完成
+
+# Git reset 取消上一次的操作
+取消 merge
+版本控制最大的好處之一就是讓你永遠可以後悔，因此我們常會希望把已暫存的檔案、已提交的 commit 或是已合併的 branch 取消修改，這時候我們可以使用 git reset 這個指令來幫助我們，像現在我若是想要取消剛剛的 merge 動作
+
+# 取消已暫存的檔案
+
+有時候手殘不小心將還沒修改完的檔案使用 git add 加入了 stage ，這時候可以使用 git reset HEAD <file> 來將這支檔案取消 stage：
+
+你可以看到我使用 git add 將檔案加入 stage 後，在我的 status 狀態顯示 lib/cat.rb 這支檔案現在已經準備好被 commit ，但這時我使用了 git reset HEAD 將這支檔案取消 stage，再使用 status 查看時它就變回一支還沒加入 stage 的檔案了。
+
+# 取消修改過的檔案
+連續剛剛的情況，若是我想完全放棄這次修改 (將檔案狀態回復到最新的一次 commit 時的狀態)，我可以使用 git checkout -- <file> 來回復這支檔案：
+
+# 修改上一次的commit
+手誤打太快， commit 訊息打錯時，我們可以使用 git commit --amend 來幫助我們重新修改
+
+#強制回復到上一次 commit 的版本
+有時候我們想要放棄所有修改回到 commit 時的狀態，這時候我們可以下 git reset --hard HEAD 來回復，HEAD 參數可以加上一些變化，
+例如 HEAD是当前这个版本 
+HEAD^ 表示目前版本的上一個版本 
+HEAD~2 則是再上一個，因此你可以自由的跳回去之前的狀態。
+
+你可能會在這邊感到疑惑，在使用 git reset 的時候都會看到一個 soft 或是 hard 的參數，這代表什麼樣的意義？基本上在使用 git reset 的時候，都會把目前狀態回復到你想回復的版本，但若是不加參數的情況，會把你做過的修改仍然保留，但是，若是加上 —soft 參數，則會把做過的修改加入 stage ，若是加上 hard 參數的話則是把做過的修改完全刪除，回到那個版本原本的樣子。
+
+
+
 ---
 #Question
 
