@@ -1,28 +1,16 @@
+
 <!-- MarkdownTOC autolink="true" bracket="round" -->
 
 - [MarkDown manual](#markdown-manual)
     - [显示markdown在浏览器上](#显示markdown在浏览器上)
     - [markdown 插件安装](#markdown-插件安装)
     - [语法说明](#语法说明)
-        - [跳转](#跳转)
-        - [空格](#空格)
-        - [列表](#列表)
-        - [引用](#引用)
-        - [图片与链接](#图片与链接)
-        - [链接](#链接)
-        - [插入图片](#插入图片)
-        - [粗体与斜体](#粗体与斜体)
-        - [表格](#表格)
-        - [代码框](#代码框)
-        - [分割线](#分割线)
-        - [按键输入](#按键输入)
-        - [反斜杠](#反斜杠)
-        - [删除线](#删除线)
 
 <!-- /MarkdownTOC -->
 
 
 *[toc]引用目录*
+
 
 # MarkDown manual
 
@@ -53,6 +41,7 @@
 [markdown插件](http://www.jianshu.com/p/aa30cc25c91b)
 
 **在github上有各个插件的使用说明**
+
 ## 语法说明
 
 ### 跳转

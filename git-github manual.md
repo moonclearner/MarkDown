@@ -1,5 +1,29 @@
 #github manual
 
+
+<!-- MarkdownTOC autolink="true" bracket="round" -->
+
+- [create local git repository](#create-local-git-repository)
+- [push and pull](#push-and-pull)
+- [Clone\(複製\)別人的 Repository](#clone複製別人的-repository)
+- [Git的基本功\(status, add, commit, log, .gitignore\)](#git的基本功status-add-commit-log-gitignore)
+- [Git branch](#git-branch)
+- [Git rebase 整理現在的 branch](#git-rebase-整理現在的-branch)
+- [Confict: 處理 Git 合併時的衝突：](#confict-處理-git-合併時的衝突：)
+- [Git reset 取消上一次的操作](#git-reset-取消上一次的操作)
+- [取消已暫存的檔案](#取消已暫存的檔案)
+- [取消修改過的檔案](#取消修改過的檔案)
+- [修改上一次的commit](#修改上一次的commit)
+- [強制回復到上一次 commit 的版本](#強制回復到上一次-commit-的版本)
+- [Question](#question)
+  - [Git 提示fatal: remote origin already exists 错误解决办法](#git-提示fatal-remote-origin-already-exists-错误解决办法)
+  - [被加入 gitignore 的檔案一樣出現在 status 中？](#被加入-gitignore-的檔案一樣出現在-status-中？)
+  - [gitk -all](#gitk--all)
+
+<!-- /MarkdownTOC -->
+
+
+
 # create local git repository
 cd 进入你要创建的local repository
 $ git init
@@ -84,7 +108,9 @@ git branch 這個指令可以列出所有的 branch 並告訴你目前正在哪�
 `git rebase`
 **不單單只是將兩個不同的 branch 合併起來，而是將某一支 branch 基於另一支 branch 的內容合併起來**
 
-git rebase 會基於 master branch 目前最後一次的 commit 內容再往後把你在 cat branch 上commit 的內容加上去，我們現在在 cat branch 輸入 git rebase master 來將 cat branch 基於 master branch 做 rebase。
+git rebase 會基於 master branch 目前最後一次的 commit 內容再往後把你在 cat branch 上commit 的內容加上去，我們現在在
+**cat branch**
+輸入 `git rebase master `來將 cat branch 基於 master branch 做 rebase。
   在master中可以看到新的版本
 
 原先 cat branch 上的兩個 commit (Add Cat.rb 和 Add initializer) 已經合併到 master branch 最新的 commit (Another spec)，換句話說目前 cat branch 的內容就像是剛從 master branch 所 checkout 出來然後再加上自己的 commit，因此不同於 git merge 的線圖會把 cat branch 合併到 master branch ， 而是把原本的 cat branch 接到 master branch 因此只有一條線，當一個專案有很多的 branch 再做開發的時候會避免很多 branch 的線接來接去難以辨認。
