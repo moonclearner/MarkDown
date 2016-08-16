@@ -76,12 +76,24 @@ git branch 這個指令可以列出所有的 branch 並告訴你目前正在哪�
 我們發現現在 master branch 與 cat branch 已經產生分歧了，因為兩支 branch 都有了各自往後開發的 commit ，而且由於 master branch 最後一次的 commit 時間較新因此排列在最前面。
 
 
+#Git rebase 整理現在的 branch
+假設我們現在在 cat branch 的開發動作已經完畢，通常我們現在要做的事情會是將 cat branch 合併回 master branch，在開發流程上， master branch 就像是一個主要的 branch ，每個開發人員都是從 master branch checkout 出去一支新的 branch 做開發，在開發完畢後就再將開發完的 branch 合併回 master branch，因此 master branch 都會保有最新的開發好的狀態
+
+`git rebase`
+**不單單只是將兩個不同的 branch 合併起來，而是將某一支 branch 基於另一支 branch 的內容合併起來**
+
+git rebase 會基於 master branch 目前最後一次的 commit 內容再往後把你在 cat branch 上commit 的內容加上去，我們現在在 cat branch 輸入 git rebase master 來將 cat branch 基於 master branch 做 rebase。
+  在master中可以看到新的版本
+
+原先 cat branch 上的兩個 commit (Add Cat.rb 和 Add initializer) 已經合併到 master branch 最新的 commit (Another spec)，換句話說目前 cat branch 的內容就像是剛從 master branch 所 checkout 出來然後再加上自己的 commit，因此不同於 git merge 的線圖會把 cat branch 合併到 master branch ， 而是把原本的 cat branch 接到 master branch 因此只有一條線，當一個專案有很多的 branch 再做開發的時候會避免很多 branch 的線接來接去難以辨認。
 
 
+若你想要看看目前的 branch 與其他 branch 有哪些差異，你可以使用`git diff cat master `的指令去觀察，例如我現在想要看 master 跟 cat 這兩個 branch 的差異，我只要下：
+
+如果我們開發完畢時，我們會把開發好的東西合併回 master 很自然的我們通常都會使用 `git merge cat`這個指令來合併兩個branch
 
 
-
-
+可以看到我剛剛在 master branch 下了 `git merge cat` 這個指令來告訴 git 要 merge cat 到現在所在的 branch ，因此在圖上就看到了 cat branch 拉一條線回來合併到了 master 這個 branch 了，解釋這張圖的意思就是， cat branch 從 master branch 的 Another spec 這一次的 commit 分支出來後，自己產生了三次的 commit (Add Cat.rb、Add initializer、Rever “Add initializer”) 然後合併到 master。
 
 
 ---
