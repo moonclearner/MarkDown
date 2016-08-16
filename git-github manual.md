@@ -1,3 +1,5 @@
+#github manual
+
 # create local git repository
 cd 进入你要创建的local repository
 $ git init
