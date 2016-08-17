@@ -5,6 +5,15 @@
 [Sublime Text3 - 实用设置](https://segmentfault.com/a/1190000002596724)
 [Sublime Text常用插件总结及Package Control安装方法](http://9iphp.com/web/html/1260.html)
 
+2016/8/16
+
+[近乎完美的 Markdown 写作体验](http://blog.leanote.com/post/54bfa17b8404f03097000000)
+
+[markdown流程图语法](http://blog.csdn.net/aizhaoyu/article/details/44350821)
+
+
+2016/8/17
+[sublime学习博客](http://www.dengzhr.com/frontend/tools/820)
 
 ```
 graph z

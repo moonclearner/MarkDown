@@ -5,6 +5,7 @@
     - [显示markdown在浏览器上](#显示markdown在浏览器上)
     - [markdown 插件安装](#markdown-插件安装)
     - [语法说明](#语法说明)
+    - [Vim 模式](#vim-模式)
 
 <!-- /MarkdownTOC -->
 
@@ -45,7 +46,11 @@
 ## 语法说明
 
 ### 跳转
-点击菜单栏 Goto - Goto Symbol, 或者快捷键 ctrl+R 即可调出文档内导航面板，实现迅速在文章各标题间跳转的功能。感兴趣的读者还可以尝试 Goto Anything、书签等等高级功能。
+点击菜单栏 Goto - Goto Symbol, 或者快捷键 ctrl+R 即可调出文档内导航面板，实现迅速在文章各标题间跳转的功能。感兴趣的读者还可以尝试 Goto Anything、书签等等高级功能。  
+**仅仅能够跳转英文  不能跳转中文  无论是onmimarkupreviewer 还是markdown preview**
+
+
+
 
 ### 空格
 　　Markdown语法会忽略首行开头的空格，如果要体现出首行开头空两个的效果，可以使用 全角符号下的空格 ，windows下使用 shift+空格 切换。
@@ -163,4 +168,10 @@ _这是斜体_
 
 ~~这是一条删除线~~
 
+
+##Vim 模式
+
+Sublime Text 内置 Vim 模式支持，你只需到用户设置文件将 "ignored_packages": ["vintage"] 中的 vintage 删除即可。Sublime Text 并没有试图将 Vim 的按键映射全盘照搬过来，而是较好的进行了提炼融合。这使得大部分操作都能同时在编辑模式和命令模式下完成，有效地减少了在两种模式间不停切换的次数。
+
+关于 Vim 相关操作请直接参考其网络教程，Sublime Text 对于绝大多数命令均支持。
 
