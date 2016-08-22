@@ -1,8 +1,9 @@
 
 
+
 #github manual
 
-
+**linux下生成ssh需要使用超级权限sudo   -s  并且邮箱最好填写github账号邮箱地址**
 
 
 
