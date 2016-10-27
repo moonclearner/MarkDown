@@ -57,11 +57,11 @@ timeline
 
 targets:
 
--[ ] using github to set up my blog  referencing web github favorite
--[ ] [typora官方教程](http://support.typora.io/Add-Custom-CSS/)使用定制css做一个
--[ ] 写一个typora高级教程
--[ ] ctex using on winedit and sublime text
--[ ] virtualenv to install
+- using github to set up my blog  referencing web github favorite
+- typora官方教程](http://support.typora.io/Add-Custom-CSS/)使用定制css做一个
+- 写一个typora高级教程
+- ctex using on winedit and sublime text
+- virtualenv to install
 
 ### 10月26日
 
