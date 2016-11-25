@@ -7,10 +7,19 @@
 因为markdown的跳转仅仅能够跳转英文  不能跳转中文  无论是onmimarkupreviewer 还是markdown preview，可以在github上更改这个问题将其一起跟进
 
 
-## 整理猎豹浏览器书签与chrome的书签融合
 
 
+http://happycasts.net/
 
-##  赫师兄ps 
 
-## 赵永宽date
+2016/8/18
+node.js learning
+
+swift
+
+2016/8/21
+语言学习  
+  了解语言的优势和劣势
+  在线找语言学习的学习路线
+
+  [python learing route](http://www.tuicool.com/articles/QBZzquY) 

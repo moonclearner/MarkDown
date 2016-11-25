@@ -1,82 +1,10 @@
-# learning log
+# 11æœˆ_log
 
-### 10ÔÂ12ÈÕ
+### 11æœˆ1æ—¥
 
-- ³õ²½Íê³ÉÔÚwindowsÏÂÅúÁ¿´òÓ¡word½Å±¾³ÌĞò
-- ÔÚÄ½¿ÎÍø£¬Ñ§Ï°°²×°django 
-  - Ê¹ÓÃpip°²×°
-  - ÏÂÔØgithub zip Ê¹ÓÃpython setcp.py install
-  - ³õ²½µÄdjangoÑ§Ï°
-
-### 10ÔÂ13ÈÕ
-
-- djangoµÄÓÅµãºÍÈ±µã
-  - flask and tornado Í¬ÑùµÄweb¿ò¼Ü
-  - jinja2 and Werkzeug ÄÚ²¿»úÖÆ
-- vim install and cmd option and cmd using
+- learing about ã€Šå¤§å®¶æ¥å­¦LATEXã€‹
 
 
-### 10ÔÂ16ÈÕ
+### 11æœˆ3æ—¥
 
-- Django Ñ§Ï°
-
-### 10ÔÂ17ÈÕ
-
-- pythonÕıÔò±í´ïÊ½
-
-### 10ÔÂ19ÈÕ
-
-- python ´íÎóÓëÒì³£Ñ§Ï°
-
-### 10ÔÂ20ÈÕ
-
-- python ÎÄ¼ş²Ù×÷ÓëosÄ£¿éÑ§Ï°
-
-### 10ÔÂ21ÈÕ
-
-- ipython°²×°
-- Ä£¿éNumpy¡¢scipy¡¢Matplotlib Ê¹ÓÃpip°²×°
-
-### 10ÔÂ22ÈÕ
-
-- ipythonÑ§Ï°notesÉÏ´«²©¿Í
-
-### 10ÔÂ24ÈÕ
-
-- ¡¶vimÊµÓÃ¼¼ÇÉ¡·Ñ§Ï°
-- ?
-
-### 10ÔÂ25ÈÕ
-
-timeline
-
-- git clone zhihu  simulation  log-in
-- watch github trending
-- install ctex
-- watch python cookbook 10 pages
-
-targets:
-
-- using github to set up my blog  referencing web github favorite
-- typora¹Ù·½½Ì³Ì](http://support.typora.io/Add-Custom-CSS/)Ê¹ÓÃ¶¨ÖÆcss×öÒ»¸ö
-- Ğ´Ò»¸ötypora¸ß¼¶½Ì³Ì
-- ctex using on winedit and sublime text
-- virtualenv to install
-
-### 10ÔÂ26ÈÕ
-
-timeline
-
-- installed CTex will cover over your environment path  pls backup your path environment
-
-### 10ÔÂ27ÈÕ
-
-timeline
-
-- install MinGW64
-- install MinGW64 - QTcreator 
-- install ruby and jekyll again because installed Ctex  deleted my path environment
-
-## ´ı½â¾ö£º
-
-- ½â¾ö±¾µØÍ¼Æ¬ÈçºÎ±£´æµ½markdownÉÏÃæ
+- python è£…é¥°å™¨ æ…•è¯¾ç½‘å­¦ä¹ 

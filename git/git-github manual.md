@@ -38,6 +38,7 @@ $ git init
 # push and pull
 
 1. 在guthub上创建repository之后
+2. 新建一个文件夹，并且再当前文件夹中执行 git init
 2. $ git remote add origin git@github.com:用户名/repository名.git
 3. $ git pull git@github.com:bxxfighting/NowToDo.git  由于我建立仓库的时候创建README.md之时，已经算一次提交了，我需要先在本地同步一下仓库的内容
 4. $ git add .  
@@ -199,3 +200,11 @@ $ git remote add origin git@github.com:FBing/java-code-generator
 在Bash提示符下输入：
 
 git config --global gui.encoding utf-8
+
+
+
+  git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com
+  cd USERNAME.github.com
+ git remote add  origin git@github.com:moonclearner/moonclearner.github.com.git
+  git remote set-url origin git@github.com:moonclearner/moonclearner.github.com.git
+  git push origin master
