@@ -1,0 +1,1 @@
+[windows下载](http://www.lfd.uci.edu/~gohlke/pythonlibs/)
