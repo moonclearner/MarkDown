@@ -62,6 +62,9 @@ python manage.py migrate
 
 and It will autoadd ID on table for autoadd row ID
 
+### create user
+python manange.py createsuperuser
+
 ### foreign key
 Name = models.ForeignKey(FirstModel)
 link FirstModel Nid
@@ -72,6 +75,10 @@ Name = models.OneToOneField()
 ### many to many
 Name = models.ManyToManyField(FirstModel)
 
+
+## ues model
+### check your model
+python manange.py check
 
 ## Model add delete search and change
 

@@ -82,8 +82,8 @@ sudo supervisotctl -c /etc/supervisord.conf [start|stop|restart] [program-name|a
 
 ### example for uwsgi
 - create new file uwsgi.ini
-	path: /home/ubuntu/projectname/uwsgi.ini
-content:
+ path: /home/ubuntu/projectname/uwsgi.ini
+ content:
 
 ```bash
 [uwsgi]
@@ -99,6 +99,10 @@ threads = 4
 ### run uwsgi in ini file
 uwsgi --ini uwsgi.ini
 
+### shut down uwsgi
+
+sudo killall -9 uwsgi
+
 
 ## install Nginx
 
@@ -107,6 +111,7 @@ sudo /etc/init.d/nginx restart
 
 ## question
 ### allow host
+
 alter setting.py
 ALLOWED_HOSTS = ["moonclearner.cn"]
 

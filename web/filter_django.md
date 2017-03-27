@@ -36,3 +36,16 @@ url(r'^$',views.index)   //127.0.0.1:8080
 		<a href="/admin/auth/user/" >welcome:{{user.username}}</a>
 	{% endif %}
 	{% endblock %}
+
+## admin user manange
+​```python
+@Filter(S_before, S_after):
+def Index(request):
+	pass
+
+def S_before(request):
+	pass
+
+def S_after(request):
+	pass
+```

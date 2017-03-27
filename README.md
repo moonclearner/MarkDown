@@ -1,10 +1,11 @@
-# 11月_log
+# 2017/3/27 星期一 22:48:53
 
-### 11月1日
+## 360 实习网上培训
 
-- learing about 《大家来学LATEX》
+www.ichunqiu.com
 
+learning python 安全工具开发
 
-### 11月3日
+python 网络编程
 
-- python 装饰器 慕课网学习
+note in /python_secure/
