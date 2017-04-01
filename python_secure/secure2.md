@@ -57,3 +57,11 @@ re: "ab*?"
 
 ## Partice example
 result = re.findall(r'title="(.*?)" onclick=', word)
+
+
+# summary
+- 寻找大师，跟随大师，与大师同行，洞察大师，成为大师
+    知乎，ve2x.com, github.com
+- gevent run in linux
+
+
