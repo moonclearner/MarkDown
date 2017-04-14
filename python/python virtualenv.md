@@ -1,23 +1,23 @@
-#python virtualenv 
-python使用virtualenv在windows上实现python2与python3共同使用
+#python virtualenv
+python 使用 virtualenv 在 windows 上实现 python2 与 python3 共同使用
 
 ##features
 
 ##install
-- 在windows 已经安装了python2 and python3
-- windows 配置的是python2的环境变量
-- 在python3的/scripts下 运行pip install virtualenv 
-- 即可为python3 创建一个虚拟的py3环境
+- 在 windows 已经安装了 python2 and python3
+- windows 配置的是 python2 的环境变量
+- 在 python3 的 /scripts 下 运行 pip install virtualenv
+- 即可为 python3 创建一个虚拟的 py3 环境
 
 ##usage
-- /scripts下 virtualtenv envfilename
+- /scripts 下 virtualtenv envfilename
 
-virtualenv 环境名称[自定义的名称，自己喜欢什么就写什么]
+virtualenv 环境名称『自定义的名称，自己喜欢什么就写什么』
 
-默认情况下，虚拟环境会依赖系统环境中的site packages
-就是说系统中已经安装好的第三方package也会安装在虚拟环境中，
+默认情况下，虚拟环境会依赖系统环境中的 site packages
+就是说系统中已经安装好的第三方 package 也会安装在虚拟环境中，
 
-如果不想依赖这些package，那么可以加上参数 
+如果不想依赖这些 package，那么可以加上参数
 --no-site-packages　
 
 `virtualtenv envfilename --no-site-packages`
@@ -30,3 +30,29 @@ virtualenv 环境名称[自定义的名称，自己喜欢什么就写什么]
 ##关闭虚拟环境
 
 `deactivate`
+
+# Virtualenvwrapper
+## install Virtualenvwrapper
+用于管理建立的虚拟环境
+pip install virtualenvwrapper-win
+
+## configuration
+D:\VirtualEnv
+
+go to configure path
+create variables WORKON_HOME and value D:\VirtualEnv
+
+## confirm configure ok
+cmd$: echo %WORKON_HOME%
+
+## usage
+- show all env
+	lsvirtualenv
+- create env and activate save into %WORKON_HOME% path
+	mkvirtualenv myenv
+- delete env
+	rmvirtualenv myenv
+- switch environment
+    workon env-name
+- leave env
+	deactivate

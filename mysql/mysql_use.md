@@ -29,8 +29,7 @@
 ## auth user for DB
 - log by root
 - create database testDB
-- grant all privileges on testDB.* to username@localhost identified by
-    'userpassword';
+- grant all privileges on testDB.* to username@localhost
 - flush privileges
 ### auth few privileges to user
 - grant select, update on testDB,* to username@localhost identified by
