@@ -295,3 +295,8 @@ open nerdtree
 ## common command
 add ; three line at the line
 ctrl+q ->$ ->jjj ->A ->; ->Esc
+
+
+## vim save as sudo
+1. :w !sudo tee %
+2. :%!sudo bash -c "cat > '%'"
