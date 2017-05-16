@@ -101,14 +101,14 @@ $(function(){
 
 	$("li:first")
 	$("li:even")        #index first number is zero
-
 })
 ```
-
 ## ±í m Ñ¡ÔñÆ÷
+```javascript
 $("input[name='djj'])
 $(":text")
 <input type="text" name = "djj">
+```
 
 ## attr And CSS
 $().attr({

@@ -22,22 +22,22 @@
 
 ## ^M how to delete ^M
 
-`:%s/^M//g`
-^M "<ctrl -V> +<ctrl -M>"
+- `:%s/^M//g`
+- ^M "<ctrl -V> +<ctrl -M>"
 
 ## run markdown
-<reader>rmk
-open by typora
+- <reader>rmk
+- open by typora
 
 ## show all result when search
-/searchString<cr><leader>lv
+- /searchString<cr><leader>lv
 
 ## move windows center to cursor
-zz
-z+
-z-
-H M L move cursor to windows
-:set scrolloff=10  //let cursor on windows center alwaysly
+- zz
+- z+
+- z-
+- H M L move cursor to windows
+- :set scrolloff=10  //let cursor on windows center alwaysly
 
 ## move on buffers
 - :ls, :buffers
@@ -56,112 +56,107 @@ H M L move cursor to windows
     by vertical split
 
 ## reg pasteclipboard
-:reg
-show all reg
-"+ system reg
+- :reg
+- show all reg
+- "+ system reg
 - yyn
-   n is name of reg
-   paste reg content to current lin
+   - n is name of reg
+   - paste reg content to current lin
 
 ## on txt file move to title
-ctrl + ]
+- ctrl + ]
 
 # 2017/2/26 ÐÇÆÚÈÕ 21:05:31
 
 ## switch tabel
-gt
+- gt
 
 ## create tabel
-<leader>nt
+- <leader>nt
 
 ## insert current time
-<leader>tt
+- <leader>tt
 
 ## switch windows
-Ctrl + f : next windows
-Ctrl + b : last windows
-
-ctrl + d : next half windows
-ctrl + u : last half windows
+- Ctrl + f : next windows
+- Ctrl + b : last windows
+- ctrl + d : next half windows
+- ctrl + u : last half windows
 
 ## delete trick
-dw
-de
-db
-d$  delete to row end
-di
-dtc delete between c all charcters
+- dw
+- de
+- db
+- d$  delete to row end
+- di
+- dtc delete between c all charcters
 
 ## read and save
-:r filename  read filename to current cursor
-1,20 w filename  create new filename to 1,20 line content
-1,$ w filename whole content write new filename
-1,20 w >> filename write 1,20 content to filename last line
+- :r filename  read filename to current cursor
+- 1,20 w filename  create new filename to 1,20 line content
+- 1,$ w filename whole content write new filename
+- 1,20 w >> filename write 1,20 content to filename last line
 
 ## autoindent
-==
+- ==
 
 ## jump to last cursor
-ctrl + i
-ctrl + o
+- ctrl + i
+- ctrl + o
 
 ## jedi
-K document
-<leader>g  go to
-not for javascript
+- K document
+- <leader>g  go to
+- not for javascript
 
 ## setting pwd
-<leader>.
+- <leader>.
 
-## nerdtree
-rename file
+## nerdtrem
+- rename file
 - `m` ->`m`
 - alter filename
-
-delete file
-use key "m"
+- delete file
+- use key "m"
 
 ## emmet key
-,, == `<ctrl y>,`
+- ,, == `<ctrl y>,`
 
 ## go to mark
-mark place: m {a-zA-Z}
-go to mark: '{a-zA-Z}
-delete mark: :delmarks {a-zA-Z}
-show all mark: :marks
+- mark place: m {a-zA-Z}
+- go to mark: '{a-zA-Z}
+- delete mark: :delmarks {a-zA-Z}
+- show all mark: :marks
 
 ## line choose by visual mode
-line visual mode: V
-Vjj
-
-¿é visual mode: ctrl + v but on windows ctrl + q
-
-gv  => choose last visual chosed text
-
-o   => cursor move to selected text end
-O   => cursor move to selected text start
+- line visual mode: V
+- Vjj
+- ¿é visual mode: ctrl + v but on windows ctrl + q
+- gv  => choose last visual chosed text
+- o   => cursor move to selected text end
+- O   => cursor move to selected text start
 
 ## run python code on your vim
+```python
 s = 'djj'
 print s
-
-**Run code by select 2 line Vkk, then press: !python and hit enter**
-
-and output:
-djj
-
-anothor example:
+```
+- **Run code by select 2 line Vkk, then press: !python and hit enter**
+output:djj
+- anothor example:
+```python
 def func(x, y):
 	return x + y
-
 print func(3, 4)
-
+```
 **output:7**
 
+```python
 for i in 'moonclearner':
 	print i
-
+```
 **output:**
+```
 m
 o
 o
@@ -174,8 +169,7 @@ r
 n
 e
 r
-
-
+```
 ## vim-surround
 "hello world"
 - press cs"' inside " switch to '
@@ -202,44 +196,43 @@ hello world
 	</p>
 
 ## close label tag
-<p>>
+- <p>>
 output: <p></p>
 
 
 ## block visual
-`ctrl+v`  on unix
-`ctrl+q`  on windows
-
-jjj or % muti line select
-
-i,I,a,A to input
+- `ctrl+v`  on unix
+- `ctrl+q`  on windows
+- jjj or % muti line select
+- i,I,a,A to input
 
 ## ^ and 0
+```
      this a sentence!
-cursor on t
-^ the cursor will jump to c
-0 the cursor will jump to space, first column
+```
+- cursor on t
+- ^ the cursor will jump to c
+- 0 the cursor will jump to space, first column
 
 ## $ and g_
-$ go to the end of line
-g_ go to the last non-blank character of line
+- $ go to the end of line
+- g_ go to the last non-blank character of line
 
 ## buffer
-:bn
-:bp
-:buffers -> show all buffers
+- :bn
+- :bp
+- :buffers -> show all buffers
 
 ## saveas
-:saveas   -> save as
+- :saveas   -> save as
 
 ## \# and \*
-\# look previous same character
-\* jump next same character
+- \# look previous same character
+- \* jump next same character
 
 ## yank muti times character
-this my test and test
-*the cursor on i*
-
+- this my test and test
+- *the cursor on i*
 - y2/test ->will copy `is my test and `
 	yank up to the second occurence of test
 - y/test   -> will yank `is my `
@@ -248,21 +241,19 @@ this my test and test
 - y$
 
 ## f and t
-fa -> go to next occurence of the letter `a` on the line
+- fa -> go to next occurence of the letter `a` on the line
 	, and ; respresent next and previous, reverse use F
-ta -> go to just before the character `a`, reverse use T
-
+- ta -> go to just before the character `a`, reverse use T
 ## dt and yt
-t represent to
-delete everything util the character before
-yank everything util the character before
+- t represent to
+- delete everything util the character before
+- yank everything util the character before
 
 ## Zone select
-adb(map(+)("foo"))nnn
-**cursor on `o`**
-
-vi" -> will select foo
-va" -> will select "foo"
+- adb(map(+)("foo"))nnn
+- **cursor on `o`**
+- vi" -> will select foo
+- va" -> will select "foo"
 - vi) -> will select "foo"
 - va) -> will select ("foo")
 - v2i) -> willl select `map(+)("foo")`
@@ -273,11 +264,11 @@ va" -> will select "foo"
 - ctrl+p previous completion
 
 ## Macros
-qa record actions in the reg a
-q  stop record actions
-@a replay the macro saved into the reg a
-@@ to replay the last executed macro
-number@@
+- qa record actions in the reg a
+- q  stop record actions
+- @a replay the macro saved into the reg a
+- @@ to replay the last executed macro
+- number@@
 
 ## visual using
 - J ->join all the lines together
@@ -285,16 +276,15 @@ number@@
 - =  ->auto indent
 
 ## split
-:split
-:vsplit
-
+- :split
+- :vsplit
 open nerdtree
-:Vexplore
-:Sexplore
+- :Vexplore
+- :Sexplore
 
 ## common command
-add ; three line at the line
-ctrl+q ->$ ->jjj ->A ->; ->Esc
+- add ; three line at the line
+- ctrl+q ->$ ->jjj ->A ->; ->Esc
 
 
 ## vim save as sudo
