@@ -11,24 +11,21 @@
 ## install nginx
 - sudo apt-get install python-dev nginx
 
-## install supervisor
-sudo pip install supervisor
-
 ## using uwsgi run server
 sudo pip install uwsgi --upgrade
 
 ### run web server by uwsgi
-uwsgi --http :8080 --chdir /path/to/project --home=/path/to/env --module project/wsgi.py
+- uwsgi --http :8080 --chdir /path/to/project --home=/path/to/env --module project/wsgi.py
 
---chdir /path/to/project  web project dir
+- --chdir /path/to/project  web project dir
 
---home  python virtualenv dir
+- --home  python virtualenv dir
 
--- module  wsgi.py dir
+- -- module  wsgi.py dir
 
 ### question
-run server
-!!! no internal routing support, rebuild with pcre support !!!
+- run server
+- !!! no internal routing support, rebuild with pcre support !!!
 
 solution:
 - sudp pip uninstall uwsgi
@@ -45,46 +42,10 @@ sudo kill -9 PID PID
 #### look up by program name
 ps aux |grep uwsgi
 
-#### ps content using gunicorn instead of uwsgi
-```
-sudo pip install gunicorn
-run:
-gunicorn -w4 -b0.0.0.0:8001 projectname.wsgi
-```
--w start the number of worker -b ip and port 0.0.0.0 watch all computer all  ip
-
-## using supervisor to manage process
-- pip install supervisor
-
-generate supervisor default configure file
-echo_supervisord_conf > /etc/supervisord.conf
-
-open supervisord.conf and all following on the bottom
-
-```
-[program:projectname]
-command=/path/to/uwsgi --http :8080 --chdir /path/to/projectname --module projectname/wsgi.py
-directory=/path/to/projectname
-startsecs=0
-stopwaitsecs=0
-autostart=true
-autorestart=ture
-```
-
-### start supervisor
-sudo supervisord -c /etc/supervisord.conf
-
-### restart project
-sudo supervisotctl -c /etc/supervisord.conf restart projectname
-
-### initate stop and restart
-sudo supervisotctl -c /etc/supervisord.conf [start|stop|restart] [program-name|all]
-
 ### example for uwsgi
 - create new file uwsgi.ini
  path: /home/ubuntu/projectname/uwsgi.ini
  content:
-
 ```bash
 [uwsgi]
 socket = 127.0.0.1:8080
@@ -100,14 +61,43 @@ threads = 4
 uwsgi --ini uwsgi.ini
 
 ### shut down uwsgi
-
 sudo killall -9 uwsgi
 
 
 ## install Nginx
 
+### nginx.conf
+```
+	##
+	# Virtual Host Configs
+	##
+
+	include /etc/nginx/conf.d/*.conf;
+	include /etc/nginx/sites-enabled/*;
+
+    server {
+    listen 80;
+    server_name moonclearner.cn; # domain name
+    access_log /home/log/nginx/blog.moonclearner.com/access.log;
+    error_log /home/log/nginx/blog.moonclearner.com/error.log;
+    client_max_body_size 75M;
+    charset utf-8;
+
+    location / {
+        include /etc/nginx/uwsgi_params;
+        uwsgi_pass 127.0.0.1:8080;
+        uwsgi_read_timeout 2;
+     }
+     location /static {
+        alias /home/ubuntu/blog/statics/;
+     }
+     }
+
+}
+```
 ### Nginx restart
-sudo /etc/init.d/nginx restart
+- sudo /etc/init.d/nginx restart
+- nginx -c /etc/nginx/nginx.conf
 
 ## question
 ### allow host

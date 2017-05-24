@@ -1,19 +1,19 @@
-- ²»°´ Esc ¶øÊÇ°´ ^¡º»òÕß ^c£¬ËÙ¶È¿ìºÜ¶à
-- Ñ§»á¼¸¸ö¶¨Î»¼üµÄÇø±ð£º0, $, {, }, g, G, w, e, b...
-- Shift+V Ñ¡¶¨¼¸ÐÐ£¬È»ºóÓÃ Ò»ÆðÒÆ¶¯
-- Ctrl+V Ñ¡¶¨ÐÐÊ×»òÐÐÎ²µÄ×Ö·û£¬È»ºóÓÃ shift+i ×ö²åÈë£¬»òÕß shift+x ×öÉ¾³ý
-- Ñ§»áÓÃ y,d ºÍ p, P ×öÕ³Ìù¼ôÇÐ
-- Ñ§»áÓÃ ^W µÄ´°¿Ú²Ù×÷¡£´ò¿ªÎÄ¼þÓÃ sp »òÕß vs
-- Ñ§»á¼ÇÂ¼ºêµÄÃüÁî¡£ÓÃ q ¼ÓÈÎÒâ¼ü¿ªÊ¼Â¼ÖÆ£¬ÔÙ°´ q ±£´æ¡£È»ºó¿ÉÓÃ @¼ÓÕâ¸öÈÎÒâ¼ü»Ø·Å£¬ÔÚ @Ç°¼ÓÊý×Ö¿É¶¨Òå»Ø·Å´ÎÊý
-- "."ÖØ¸´ÉÏÒ»¸öÃüÁî£¬"u"È¡ÏûÉÏÒ»¸öÃüÁî£¬"^r"·´È¡Ïû
-- ^n, ^p ÓÃ buf ÀïµÄ¹Ø¼ü´Ê²¹È«¡£
-- Ñ§»áËÑË÷Ìæ»»":%s/ ÒªËÑµÄ¶«Î÷ / Òª»»³ÉµÄ¶«Î÷ /g"
-- ÈÎºÎÊ±ºòÒÆµ½Ò»¸öµ¥´ÊÉÏ°´#µÄ»°¿ÉÒÔ¸ßÁÁÕâ¸öÎÄµµÀïËùÓÐÒ»ÑùµÄµ¥´Ê
-- ÓÃ¡°/¡±×öËÑË÷£¬°´ n »ò N ÉÏÒ»¸ö / ÏÂÒ»¸ö
-- ":! ÃüÁî &"¿ÉÖ±½ÓÔËÐÐÕâ¸öÃüÁî£¬ÓÃ":! ÃüÁî %&"Èç¹ûÄãÏëÈÃÕâ¸öÃüÁî¶Ôµ±Ç°Ëù±à¼­ÎÄ¼þ×ö²Ù×÷¡£
-- ÈÎºÎÊ±ºò¿ÉÓÃ":cd %:p:h"À´ÇÐ»»Ä¿Â¼µ½µ±Ç°±à¼­ÎÄ¼þËùÔÚÄ¿Â¼¡£
-- ¡°.¡± Õâ¸ö mark ´ú±í×îºóÒ»´ÎÐÞ¸ÄµÄµØ·½£¬ËùÒÔ "'." ¿ÉÒÔÌøµ½×îºóÒ»´ÎÐÞ¸ÄµÄµØ·½£¬'. ¿ÉÒÔÌøµ½×îºóÒ»´ÎÐÞ¸ÄµÄÄÇÒ»ÐÐ¡£
-- g; ºÍ g, Ôò¿ÉÒÔÔÚÕû¸ö changelist ÀïÃæÀ´»ØÌø×ª£¬ÇÃ :help changelist ¿ÉÒÔ¿´ËµÃ÷¡£
+- ä¸æŒ‰ Esc è€Œæ˜¯æŒ‰ ^ã€Žæˆ–è€… ^cï¼Œé€Ÿåº¦å¿«å¾ˆå¤š
+- å­¦ä¼šå‡ ä¸ªå®šä½é”®çš„åŒºåˆ«ï¼š0, $, {, }, g, G, w, e, b...
+- Shift+V é€‰å®šå‡ è¡Œï¼Œç„¶åŽç”¨ ä¸€èµ·ç§»åŠ¨
+- Ctrl+V é€‰å®šè¡Œé¦–æˆ–è¡Œå°¾çš„å­—ç¬¦ï¼Œç„¶åŽç”¨ shift+i åšæ’å…¥ï¼Œæˆ–è€… shift+x åšåˆ é™¤
+- å­¦ä¼šç”¨ y,d å’Œ p, P åšç²˜è´´å‰ªåˆ‡
+- å­¦ä¼šç”¨ ^W çš„çª—å£æ“ä½œã€‚æ‰“å¼€æ–‡ä»¶ç”¨ sp æˆ–è€… vs
+- å­¦ä¼šè®°å½•å®çš„å‘½ä»¤ã€‚ç”¨ q åŠ ä»»æ„é”®å¼€å§‹å½•åˆ¶ï¼Œå†æŒ‰ q ä¿å­˜ã€‚ç„¶åŽå¯ç”¨ @åŠ è¿™ä¸ªä»»æ„é”®å›žæ”¾ï¼Œåœ¨ @å‰åŠ æ•°å­—å¯å®šä¹‰å›žæ”¾æ¬¡æ•°
+- "."é‡å¤ä¸Šä¸€ä¸ªå‘½ä»¤ï¼Œ"u"å–æ¶ˆä¸Šä¸€ä¸ªå‘½ä»¤ï¼Œ"^r"åå–æ¶ˆ
+- ^n, ^p ç”¨ buf é‡Œçš„å…³é”®è¯è¡¥å…¨ã€‚
+- å­¦ä¼šæœç´¢æ›¿æ¢":%s/ è¦æœçš„ä¸œè¥¿ / è¦æ¢æˆçš„ä¸œè¥¿ /g"
+- ä»»ä½•æ—¶å€™ç§»åˆ°ä¸€ä¸ªå•è¯ä¸ŠæŒ‰#çš„è¯å¯ä»¥é«˜äº®è¿™ä¸ªæ–‡æ¡£é‡Œæ‰€æœ‰ä¸€æ ·çš„å•è¯
+- ç”¨â€œ/â€åšæœç´¢ï¼ŒæŒ‰ n æˆ– N ä¸Šä¸€ä¸ª / ä¸‹ä¸€ä¸ª
+- ":! å‘½ä»¤ &"å¯ç›´æŽ¥è¿è¡Œè¿™ä¸ªå‘½ä»¤ï¼Œç”¨":! å‘½ä»¤ %&"å¦‚æžœä½ æƒ³è®©è¿™ä¸ªå‘½ä»¤å¯¹å½“å‰æ‰€ç¼–è¾‘æ–‡ä»¶åšæ“ä½œã€‚
+- ä»»ä½•æ—¶å€™å¯ç”¨":cd %:p:h"æ¥åˆ‡æ¢ç›®å½•åˆ°å½“å‰ç¼–è¾‘æ–‡ä»¶æ‰€åœ¨ç›®å½•ã€‚
+- â€œ.â€ è¿™ä¸ª mark ä»£è¡¨æœ€åŽä¸€æ¬¡ä¿®æ”¹çš„åœ°æ–¹ï¼Œæ‰€ä»¥ "'." å¯ä»¥è·³åˆ°æœ€åŽä¸€æ¬¡ä¿®æ”¹çš„åœ°æ–¹ï¼Œ'. å¯ä»¥è·³åˆ°æœ€åŽä¸€æ¬¡ä¿®æ”¹çš„é‚£ä¸€è¡Œã€‚
+- g; å’Œ g, åˆ™å¯ä»¥åœ¨æ•´ä¸ª changelist é‡Œé¢æ¥å›žè·³è½¬ï¼Œæ•² :help changelist å¯ä»¥çœ‹è¯´æ˜Žã€‚
 - <win> + <pg up> or <pg down> or <pg left> //change windows size
 - <win> + left or right //rapidly change windows to watch two files diffience
 - <ctrl + w> + <+> or <->  //change windows size
@@ -66,7 +66,7 @@
 ## on txt file move to title
 - ctrl + ]
 
-# 2017/2/26 ÐÇÆÚÈÕ 21:05:31
+# 2017/2/26 æ˜ŸæœŸæ—¥ 21:05:31
 
 ## switch tabel
 - gt
@@ -131,7 +131,7 @@
 ## line choose by visual mode
 - line visual mode: V
 - Vjj
-- ¿é visual mode: ctrl + v but on windows ctrl + q
+- å— visual mode: ctrl + v but on windows ctrl + q
 - gv  => choose last visual chosed text
 - o   => cursor move to selected text end
 - O   => cursor move to selected text start
