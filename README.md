@@ -13,11 +13,15 @@ note in /python_secure/
 如果你做的事情毫不费力，那你就是在浪费时间，
 做自己想做的事情，而不要做别人认为做的事情。
 
-## plan to do
-写一份华为校招简历
-
 ## code to read
 - django_Restful_framework
 - request
 - flask
 - django
+
+# 2017/6/19 星期一 11:47:52
+## plantodo
+- 整理一下自己的知识体系
+- 找个实习
+- 明确一下自己的目标
+- 努力完成自己的 paper
