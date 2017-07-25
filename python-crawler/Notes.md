@@ -148,3 +148,35 @@ http://s3.amazonaws.com/alexa-static/top-1m.csv.zip
 - 将传入的 url 设置为三种状态：刚刚传入队列，处理中，以及处理完毕
 - 设置 timestamp
 - 设计的函数包括了：存入 url，取出 url，改变 url 完成的标志位，
+
+## 动态内容
+### 对动态网页进行逆向工程
+如何下载利用 ajax 下载到的 json, 使用 json 进行解析
+
+### GWT(Google Web Toolkit)
+压缩的 js 可以被 jsbeautifier 进行还原
+
+### WebKit 渲染引擎
+就是模仿浏览器对 html、css、js 进行渲染
+QT 可以获得 webkit 的接口
+
+### Selenium
+浏览器自动化的 API，支持大多数浏览器
+比如输入值，选取值，点击等自动化处理
+
+## 表单处理
+### 登录表单
+输入登录表单
+- urllib.urlencode({'email':dd, 'password':123})
+- 登录表单中有些值是隐藏的，可以用 lxml 解析出来，比如_formkey, 为了避免 form 多次提交，每次加载网页的时候，会产生一个不同的 ID
+- cookie，当用户加载登录表单的时候，_formkey 会保存到 cookie 中，然后在提交的时候，该值与提交的登录表单数据中的_formkey 对比
+	- 需要开启 cookie urllib.HTTPCookieProcessor 支持 cookie
+#### 使用浏览器加载 cookie
+不同的浏览器存储 cookie 的方式不一样
+Firefox 在 sqllite 数据库中存储 cookie，在 json 文件中存储 session
+登录的时候 只需要 session，使用 json 读取该文件
+
+- os.path.expanduser(file) 替换~
+- glob.glob 替换*
+- browsercookie 快速的进行浏览器加载 cookie
+
