@@ -180,3 +180,86 @@ Firefox 在 sqllite 数据库中存储 cookie，在 json 文件中存储 session
 - glob.glob 替换*
 - browsercookie 快速的进行浏览器加载 cookie
 
+- urllib2.request(url,data)
+	如果 data 为空的时候，该请求为 post，否则是 get
+	data 需要用 urllib.urlencode(data) 进行加密
+
+### post
+
+#### mechanize
+模拟浏览器，进行表单输入，post 请求
+只适用于静态网页的抓取，如果是异步的数据，则页面显示的结果与抓取的结果不一致
+
+
+## 验证码 captcha
+### 下载验证码图像
+Pillow 推荐使用
+PIL 2009 停止更新
+### 光学字符识别 OCR
+Tesseract 惠普
+python 接口：pytesseract
+将图片输入到 tesseract
+- 转化为灰度图片
+- 将像素小于 1 的保留，其他的返回 255，即仅仅保留全黑的像素保留
+
+#### improvement
+- 实验不同的阈值
+- 腐蚀阈值文本，突出字符形状
+- 调整图像大小
+- 根据验证码字体训练 OCR 工具
+- 限制结果为字典单词
+### API 人工识别验证码
+#### 9kw
+- 发送 post 请求，包含验证码图片 url，apikey，等待处理的时间，返回验证码的 ID
+- 发送 get 请求，包含了 apikey，验证码的 ID，等待返回数据
+
+## scrapy
+### install
+pip install scrapy
+scrapy 目前只支持 2.7 or pythn3.3+
+scrapy 因为使用了 twist 所以 py3 的支持
+
+### create project
+scrapy startproject example
+
+### create crawler spider
+scrapy genspider spidername url --template=crawl
+
+### 使用 shell 进行爬取
+scrapy shell http://example.webscraping.com/view/Unite-Kingdom-239
+
+### 测试
+scrapy crawl spidername --output=countres.csv -s LOG_LEVEL=INFO
+
+### LEVEL
+- ERROR
+	仅仅输出错误信息
+- DEBUG
+	输出所有的信息
+- INFO
+	过滤不重要的信息
+
+### 爬虫的暂停与停止
+scrapy crawl country -s LOG_LEVEL=DEBUG -s JOBDIR=crawls/country
+当按下 ctrl + c 就会在执行一会然后停止，其结果会保存在 crawls/country
+进入该目录之后，在使用 scrapy crawl country -s LOG_LEVEL=DEBUG -s JOBDIR=crawls/country
+就会继续运行
+
+## porita
+基于 scrapy 的不需要自己写 lxml，通过点击创建爬虫的开源工具
+### 安装
+建议使用 virtualenv 因为 lxml 的版本比较老
+### 使用
+- 通过点击创建一个你需要的项目
+- 开启 portiacrawl porita/slyd/data/project/new_project
+
+## scrapely
+使用训练数据建立从网页中抓取那些内容的模型
+总结就是可以训练一个数据集，然后用于下载相识的网站进行爬虫
+他是 porita 背后的算法
+
+
+## 爬虫失败的几个原因
+- 同一个域名下，发送一次请求
+- 每次请求的需要延时，而且延时的时间要随机
+
