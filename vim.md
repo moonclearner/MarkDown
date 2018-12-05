@@ -301,3 +301,5 @@ open nerdtree
 - requirement python and pip install yapf
 - <leader>=
 
+## run only read file by user conf
+sudo -E vim filename
