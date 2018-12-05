@@ -291,12 +291,6 @@ open nerdtree
 1. :w !sudo tee %
 2. :%!sudo bash -c "cat > '%'"
 
-
-## markdown toc
-- :GenTocGFM
-- :GenTocRedcarpet
-- :UpdateToc
-
 ## yapf python format
 - requirement python and pip install yapf
 - <leader>=
